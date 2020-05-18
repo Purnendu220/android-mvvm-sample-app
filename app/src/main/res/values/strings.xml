@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">AndroidMvvm</string>
+    <string name="app_name">Aushadhi</string>
+    <string name="login">Login</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+    <string name="username_required">Username is required</string>
+    <string name="password_required">Password is required</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="feild_required">%s is required</string>
+    <string name="feild_required_common">This feild is required</string>
+    <string name="email_invalid">Email you entered is invalid</string>
+
+
 </resources>
