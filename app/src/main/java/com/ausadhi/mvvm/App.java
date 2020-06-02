@@ -2,6 +2,7 @@ package com.ausadhi.mvvm;
 
 import android.app.Application;
 
+import com.ausadhi.mvvm.utils.FirebaseRemoteConfigHelper;
 import com.preference.PowerPreference;
 
 
@@ -17,6 +18,7 @@ public class App extends Application {
         super.onCreate();
         sInstance = this;
         PowerPreference.init(this);
+        FirebaseRemoteConfigHelper.getFirebaseRemoteConfigHelper(getApplicationContext()).fetchRemoteConfig();
 
     }
 

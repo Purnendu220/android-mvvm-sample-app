@@ -12,4 +12,19 @@
 
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
+    <color name="grey">#6D6B6B</color>
+    <color name="lightgrey">#EDEBEB</color>
+    <color name="black">#0C0100</color>
+    <color name="theme_bg">#f1f0ee</color>
+    <color name="theme_search">#fafafa</color>
+    <color name="theme_dark_text">#031d22</color>
+    <color name="blue_light">#42A1ED</color>
+    <color name="facebook_button">#485b92</color>
+    <color name="theme_book">#3d85ea</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_color">#520D08</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="text_color_dark">#262626</color>
+    <color name="grey_bg">#f1f0f6</color>
+
 </resources>

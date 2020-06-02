@@ -6,6 +6,8 @@ import com.ausadhi.mvvm.data.network.model.MovieResponse;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -29,6 +31,8 @@ public class LoginService {
     private static LoginService instance;
     public DatabaseReference mLoginDatabase;
     public FirebaseAuth userAuthRefrence;
+    private  CollectionReference mUserDatabase;
+
 
     public static LoginService getInstance() {
         if (instance == null) {
@@ -40,11 +44,18 @@ public class LoginService {
     private LoginService() {
         mLoginDatabase  = FirebaseDatabase.getInstance().getReference(ApiConstants.Refrences.USER_REFRENCE);
         userAuthRefrence = FirebaseAuth.getInstance();
+        mUserDatabase =  FirebaseFirestore.getInstance().collection(ApiConstants.Refrences.USER_REFRENCE);
+
     }
 
     public DatabaseReference getDatabaseRefrence(){
         return mLoginDatabase;
     }
+
+    public CollectionReference getmUserDatabase() {
+        return mUserDatabase;
+    }
+
     public FirebaseAuth getauthRefrence(){
         return userAuthRefrence;
     }

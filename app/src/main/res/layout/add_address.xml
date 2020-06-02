@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor">
+
+    <LinearLayout
+        style="@style/linearParent"
+        android:padding="@dimen/loginViewsMargin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextName"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/name_add"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPhone"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextPhone"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:hint="@string/phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPinCode"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextPincode"
+                style="@style/modifiedEditText"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="8"
+                android:hint="@string/pincode"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputHouseNo"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextHouseNo"
+                style="@style/modifiedEditText"
+                android:hint="@string/house_no"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputRoadName"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextRoadName"
+                style="@style/modifiedEditText"
+                android:hint="@string/road_name"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputCityName"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextCityName"
+                style="@style/modifiedEditText"
+                android:hint="@string/city"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputState"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextState"
+                style="@style/modifiedEditText"
+                android:hint="@string/state"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLandmark"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextLandmark"
+                style="@style/modifiedEditText"
+                android:hint="@string/landmark"
+                android:maxLines="1"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/cirAddAddressButton"
+            style="@style/loginButton"
+            android:text="Add Address"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

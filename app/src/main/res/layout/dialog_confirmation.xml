@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@color/float_transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/margin_5"
+        app:cardCornerRadius="@dimen/margin_10"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/float_transparent"
+            >
+            <LinearLayout
+                android:id="@+id/linearlayoutTopPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/confirm_order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_extra_extra_large"
+                    android:fontFamily="sans-serif-medium"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/order_message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:fontFamily="sans-serif-medium"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRatePast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayoutTopPart"
+                android:background="@color/white"
+                android:visibility="visible"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_margin="@dimen/margin_15"
+                    >
+                    <TextView
+                        android:id="@+id/textViewCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_normal"
+                        android:background="@drawable/rounded_light_grey"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:letterSpacing="@dimen/button_letter_spacing"
+                        android:text="@string/cancel"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/textViewOk"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_normal"
+                        android:background="@drawable/rounded_corner"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:letterSpacing="@dimen/button_letter_spacing"
+                        android:text="@string/place_order"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

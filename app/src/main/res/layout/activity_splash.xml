@@ -7,19 +7,37 @@
     tools:context=".ui.splash.SplashActivity"
     android:orientation="vertical"
     android:weightSum="1"
+    android:background="@color/colorAccent"
     >
-    <ImageView
-        android:id="@+id/splashBottol"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/bottol"
-        android:layout_weight="1"
-        android:scaleType="centerCrop"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/splashBottol"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/splash"
+            android:layout_centerInParent="true"
+            >
+        </ImageView>
 
-        >
+        <TextView
+            android:id="@+id/textTyper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Online Stay Safe"
+            android:layout_below="@+id/splashBottol"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_extra_extra_large"
+            android:layout_marginTop="@dimen/margin_5"
+            />
+
+    </RelativeLayout>
 
 
-    </ImageView>
+
 
 
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.AddItemFragment"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addItemCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:elevation="@dimen/margin_5"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputProductName"
+                    style="@style/parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_margin="@dimen/margin_5"
+
+                    >
+                    <EditText
+                        android:id="@+id/editTextProdName"
+                        style="@style/modifiedEditText"
+                        android:background="@android:color/transparent"
+                        android:maxLength="100"
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:hint="@string/product_name"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnAddItem"
+                    style="@style/styleButton"
+                    android:text="@string/add_item"
+                    android:textSize="12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight=".5"
+                    android:layout_margin="@dimen/margin_5"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/itemListCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:elevation="@dimen/margin_5"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:layout_below="@+id/addItemCardView"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

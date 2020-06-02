@@ -15,5 +15,67 @@
     <string name="feild_required_common">This feild is required</string>
     <string name="email_invalid">Email you entered is invalid</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_quantity">Item Quantity</string>
+    <string name="add_item">Add Item</string>
+    <string name="product_name">Product Name</string>
+    <string name="pincode">Pincode*</string>
+    <string name="house_no">House No.,Building Name *</string>
+    <string name="road_name">Road Name,Area,Colony</string>
+    <string name="city">City *</string>
+    <string name="landmark">Landmark</string>
+    <string name="state">State *</string>
+    <string name="phone">Phone *</string>
+    <string name="name_add">Name *</string>
+    <string name="add_address">Add Address</string>
+    <string name="gym_branch">My Address</string>
+    <string name="no_address_available">No Address Available</string>
+    <string name="create_order">Create Order</string>
+    <string name="order_list">Order List</string>
+    <string name="profile">Profile</string>
+    <string name="continue_order">Continue</string>
+    <string name="your_address">You have %s address</string>
+    <string name="select_address">Select Address</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="message">Message</string>
+    <string name="confirm_your_order">Confirm Order</string>
+    <string name="place_order">Place Order</string>
+    <string name="cancel">Cancel</string>
+    <string name="order_message">You order for %s items will be delivered within 12 hours on below address.</string>
+    <string name="order_items">%s Item(s)</string>
+    <string name="you_havent_placed_any_order">You have not placed any order yet.</string>
+    <string name="you_havent_received_any_order">You have not received any order yet.</string>
+
+    <string name="are_you_sure">Are you sure</string>
+    <string name="realy_want_to_cancel">Do you really want to cancel your order?</string>
+    <string name="order_id"># %s</string>
+    <string name="price_hint">Price</string>
+    <string name="update_order">Update Order</string>
+    <string name="order_status">Order Status</string>
+    <string name="create_items">Create Items</string>
+    <string name="create">Create</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="edit_address">Edit Address</string>
+    <string-array name="order_status">
+        <item>ORDER STATUS</item>
+        <item>ORDER PLACED</item>
+        <item>ORDER ACCEPTED</item>
+        <item>ORDER PACKED</item>
+        <item>ORDER DELIVERED</item>
+        <item>ORDER CANCELED </item>
+        <item>ORDER CANCELED BY ADMIN</item>
+    </string-array>
+
+    <string-array name="order_status_admin">
+        <item>NA</item>
+        <item>NA</item>
+        <item>Accept Order</item>
+        <item>Pack Order</item>
+        <item>Deliver Order</item>
+        <item>NA</item>
+        <item>NA</item>
+    </string-array>
 
 </resources>

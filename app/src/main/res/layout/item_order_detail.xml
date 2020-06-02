@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddAddresActivity">
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/layout_toolbar">
+
+    </include>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_5"
+        android:layout_below="@+id/layout_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Address"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textSize="@dimen/text_large"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                ></View>
+
+            <TextView
+                android:id="@+id/textAddressName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_large"/>
+            <TextView
+                android:id="@+id/textAddressPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8130835555"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_medium"
+                />
+            <TextView
+                android:id="@+id/textAddressHouseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W 220 Awash vikas coloney Amaniganj Faizabad"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginBottom="@dimen/margin_5"
+                />
+            <TextView
+                android:id="@+id/textRoadName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W 220 Awash vikas coloney Amaniganj Faizabad"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginBottom="@dimen/margin_5"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOrderId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_5"
+        android:layout_below="@+id/mainCardContainer"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textOrderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textSize="@dimen/text_large"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                ></View>
+
+            <TextView
+                android:id="@+id/textOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_large"
+                android:textAllCaps="true"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOrderStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_5"
+        android:layout_below="@+id/cardOrderId"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textOrderStatusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Status"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textSize="@dimen/text_large"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                ></View>
+
+            <com.tiper.MaterialSpinner
+                android:id="@+id/spinnerOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:src="@drawable/ic_selector_drawable"
+                android:textColor="@color/colorAccent"
+                app:boxBackgroundColor="@color/white"
+
+
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_5"
+        android:layout_below="@+id/cardOrderStatus"
+        android:layout_above="@+id/btnUpdateOrder"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textOrderItemTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Items"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textSize="@dimen/text_large"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent"
+                ></View>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10"
+
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnUpdateOrder"
+        style="@style/styleButton"
+        android:text="@string/update_order"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_alignParentBottom="true"
+
+        />
+
+</RelativeLayout>

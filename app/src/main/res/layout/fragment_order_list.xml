@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.AddItemFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addItemCardView"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_above="@+id/btnOrderContinue">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <include
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/empty_screen_layout"
+            android:layout_below="@+id/addItemCardView"
+
+            ></include>
+
+    </RelativeLayout>
+
+    <com.example.kloadingspin.KLoadingSpin
+        android:id="@+id/KLoadingSpin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:backgroundColor="#55008DFF"
+        app:primarySpinnerColor="#ffffff"
+        app:rotationSpeedInMs="3000"
+        app:text="Please Wait ... "
+        app:secondarySpinnerColor="#FF9800"
+        app:textColor="#ffffff"
+        app:textSize="80" />
+</FrameLayout>

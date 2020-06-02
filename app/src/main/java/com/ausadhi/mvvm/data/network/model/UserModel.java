@@ -6,13 +6,17 @@ public class UserModel {
     String userMobile;
     String userEmail;
     String userPassword;
+    String userType;
+    String firebaseToken;
 
-    public UserModel(String userId, String name, String userMobile, String userEmail, String userPassword) {
+    public UserModel(String userId, String name, String userMobile, String userEmail, String userPassword,String userType,String firebaseToken) {
         this.userId = userId;
         this.name = name;
         this.userMobile = userMobile;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
+        this.userType = userType;
+        this.firebaseToken = firebaseToken;
     }
 
     public String getUserId() {
@@ -33,5 +37,17 @@ public class UserModel {
 
     public String getUserPassword() {
         return userPassword;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public String getFirebaseToken() {
+        return firebaseToken;
+    }
+
+    public void setFirebaseToken(String firebaseToken) {
+        this.firebaseToken = firebaseToken;
     }
 }

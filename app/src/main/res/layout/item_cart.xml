@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainCardContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_5"
+    app:cardElevation="@dimen/margin_5"
+    android:layout_marginBottom="@dimen/margin_10"
+    >
+    <RelativeLayout
+        android:id="@+id/mainRelativeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        >
+        <LinearLayout
+            android:id="@+id/linearContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/imgDelete"
+            >
+            <TextView
+                android:id="@+id/textProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"/>
+            <TextView
+                android:id="@+id/textProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+
+            ></ImageView>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

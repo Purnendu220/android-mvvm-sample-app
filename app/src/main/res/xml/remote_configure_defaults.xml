@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<defaultsMap>
+    <entry>
+        <key>contact_us</key>
+        <value>8130835223</value>
+    </entry>
+
+    <entry>
+        <key>order_confirmation</key>
+        <value>You order for %s items will be delivered within 12 hours on below address.</value>
+    </entry>
+    <entry>
+        <key>splash_message</key>
+        <value>Order Online Stay Safe</value>
+    </entry>
+    <entry>
+        <key>continue_button</key>
+        <value>Continue</value>
+    </entry>
+
+    <entry>
+        <key>select_address_title</key>
+        <value>Select Address</value>
+    </entry>
+
+
+</defaultsMap>

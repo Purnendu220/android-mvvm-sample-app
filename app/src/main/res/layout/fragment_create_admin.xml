@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor">
+
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="@string/create"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/name"
+                android:tag="@string/name"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/edtMobile"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/mobile"
+                android:tag="@string/mobile"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/edtEmail"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="@string/login_email_hint"
+                android:tag="@string/login_email_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/edtPassword"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_password_hint"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:tag="@string/login_password_hint"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:text="Create Admin" />
+
+        <Button
+            android:id="@+id/btnSahre"
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Share Credentials" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

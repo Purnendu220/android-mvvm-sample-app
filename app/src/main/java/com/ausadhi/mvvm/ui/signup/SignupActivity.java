@@ -15,10 +15,13 @@ import android.widget.Toast;
 import com.ausadhi.mvvm.R;
 import com.ausadhi.mvvm.data.DataManager;
 import com.ausadhi.mvvm.data.network.model.UserModel;
+import com.ausadhi.mvvm.ui.AdminActivity;
 import com.ausadhi.mvvm.ui.HomeActivity;
 import com.ausadhi.mvvm.ui.base.BaseActivity;
 import com.ausadhi.mvvm.ui.login.LoginActivity;
 import com.ausadhi.mvvm.databinding.ActivitySignupBinding;
+import com.ausadhi.mvvm.utils.AppConstants;
+import com.ausadhi.mvvm.utils.ToastUtils;
 
 
 public class SignupActivity  extends BaseActivity<SignupViewModel> implements View.OnClickListener {
@@ -75,8 +78,12 @@ public class SignupActivity  extends BaseActivity<SignupViewModel> implements Vi
 
         @Override
         public void onChanged(@Nullable UserModel users) {
-            Toast.makeText(mContext,"SignUp Success",Toast.LENGTH_LONG);
-            HomeActivity.open(mContext);
+            ToastUtils.showSuccessToast(mContext,"Signup Successful");
+            if(DataManager.getInstance().getPrefs().getUserType().equalsIgnoreCase(AppConstants.UserType.USER)){
+                HomeActivity.open(mContext);
+            }else{
+                AdminActivity.open(mContext);
+            }
             finish();
 
         }

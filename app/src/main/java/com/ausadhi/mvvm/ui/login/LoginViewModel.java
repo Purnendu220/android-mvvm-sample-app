@@ -4,17 +4,23 @@ import android.content.Context;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 
 
 import com.ausadhi.mvvm.data.DataManager;
+import com.ausadhi.mvvm.data.network.model.ProductModel;
 import com.ausadhi.mvvm.data.network.model.UserData;
 import com.ausadhi.mvvm.data.network.model.UserModel;
 import com.ausadhi.mvvm.data.network.services.LoginService;
+import com.ausadhi.mvvm.fcm.FCMHandler;
 import com.ausadhi.mvvm.ui.base.BaseViewModel;
 
+import com.ausadhi.mvvm.utils.CommonUtils;
+import com.ausadhi.mvvm.utils.LogUtils;
 import com.ausadhi.mvvm.utils.RefrenceWrapper;
 import com.ausadhi.mvvm.utils.TextUtils;
+import com.ausadhi.mvvm.utils.ToastUtils;
 import com.ausadhi.mvvm.utils.ToolsUtils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,12 +28,16 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
 
 
 public class LoginViewModel extends BaseViewModel {
-    private MutableLiveData<UserModel> userLiveData ;
+    private MutableLiveData<Object> userLiveData ;
     private MutableLiveData<Boolean> isLoading ;
 
 
@@ -54,12 +64,12 @@ public class LoginViewModel extends BaseViewModel {
         isLoading.postValue(loading);
     }
 
-    private void setUser(UserModel user) {
+    private void setUser(Object data) {
         setIsLoading(false);
-        this.userLiveData.postValue(user);
+        this.userLiveData.postValue(data);
     }
 
-    MutableLiveData<UserModel> getUserLoginStatus() {
+    MutableLiveData<Object> getUserLoginStatus() {
         return userLiveData;
     }
 
@@ -79,27 +89,26 @@ public class LoginViewModel extends BaseViewModel {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        loginService.getDatabaseRefrence().child(loginService.getauthRefrence().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                UserModel user = dataSnapshot.getValue(UserModel.class);
-                                DataManager.getInstance().getPrefs().setUser(user);
-                                setUser(user);
-                                setIsLoading(false);
 
-                            }
-
+                        loginService.getmUserDatabase().document(task.getResult().getUser().getUid()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-                                Toast.makeText(mContext,databaseError.getMessage(),Toast.LENGTH_LONG);
+                            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                                LogUtils.networkError(documentSnapshot.getId());
+                                UserModel model= CommonUtils.getUserModel(documentSnapshot.getData());
+                                DataManager.getInstance().getPrefs().setUser(model);
+                                setUser(model);
                                 setIsLoading(false);
+                                loginService.getmUserDatabase().document(loginService.getauthRefrence().getCurrentUser().getUid()).set(model);
+                                FCMHandler.getInstance().getFCMToken();
+                                CommonUtils.getProducts();
+
 
                             }
                         });
+
                     }else{
                         String error = task.getException().getMessage();
-                        setIsLoading(false);
-                        Toast.makeText(mContext,error,Toast.LENGTH_LONG);
+                        setUser(error);
 
                     }
                 }

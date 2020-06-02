@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainerAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_5"
+        >
+        <RelativeLayout
+            android:id="@+id/mainRelativeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/imgEdit"
+            >
+            <TextView
+                android:id="@+id/textAddressName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_large"/>
+            <TextView
+                android:id="@+id/textAddressPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8130835555"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_medium"
+                />
+            <TextView
+                android:id="@+id/textAddressHouseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W 220 Awash vikas coloney Amaniganj Faizabad"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginBottom="@dimen/margin_5"
+                />
+
+
+        </LinearLayout>
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_black"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toLeftOf="@+id/imgDelete"
+                android:tint="@color/colorAccent"
+                android:padding="@dimen/margin_5"
+
+                ></ImageView>
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:padding="@dimen/margin_5"
+
+
+                ></ImageView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
